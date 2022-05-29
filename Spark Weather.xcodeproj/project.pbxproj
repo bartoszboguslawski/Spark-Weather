@@ -136,7 +136,6 @@
 				69FEE64E2832CA1200DA358C /* Views */,
 				69FEE6562832D06A00DA358C /* ViewModels */,
 				69F0DCBC283CE3C100E9FFC6 /* Models */,
-				69F0DCC8283D40AF00E9FFC6 /* Colors */,
 				69FEE6572832D07400DA358C /* Helpers */,
 				69FEE6452832C7DA00DA358C /* Preview Content */,
 				69FEE6432832C7DA00DA358C /* Assets.xcassets */,
@@ -173,6 +172,7 @@
 		69FEE6572832D07400DA358C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				69F0DCC8283D40AF00E9FFC6 /* Colors */,
 				69FDA9D72836CAA000A508BE /* weatherdata.json */,
 			);
 			path = Helpers;
