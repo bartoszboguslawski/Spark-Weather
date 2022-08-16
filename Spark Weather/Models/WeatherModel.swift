@@ -1,10 +1,3 @@
-//
-//  WeatherModel.swift
-//  Spark Weather
-//
-//  Created by Bartosz Bogusławski on 24/05/2022.
-//
-
 import Foundation
 
 struct WeatherModel: Decodable {

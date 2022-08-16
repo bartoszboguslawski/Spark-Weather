@@ -1,10 +1,3 @@
-//
-//  LaunchView.swift
-//  Spark Weather
-//
-//  Created by Bartosz Bogusławski on 16/05/2022.
-//
-
 import SwiftUI
 
 struct LaunchView: View {

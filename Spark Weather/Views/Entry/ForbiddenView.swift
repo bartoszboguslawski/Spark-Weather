@@ -1,10 +1,3 @@
-//
-//  ForbiddenView.swift
-//  Spark Weather
-//
-//  Created by Bartosz Bogusławski on 19/05/2022.
-//
-
 import SwiftUI
 
 struct ForbiddenView: View {

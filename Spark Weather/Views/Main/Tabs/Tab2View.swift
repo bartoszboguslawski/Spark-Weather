@@ -1,10 +1,3 @@
-//
-//  Tab2View.swift
-//  Spark Weather
-//
-//  Created by Bartosz Bogusławski on 25/05/2022.
-//
-
 import SwiftUI
 
 struct Tab2View: View {

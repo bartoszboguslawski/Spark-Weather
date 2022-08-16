@@ -1,10 +1,3 @@
-//
-//  DailyRow.swift
-//  Spark Weather
-//
-//  Created by Bartosz Bogusławski on 25/05/2022.
-//
-
 import SwiftUI
 
 struct DailyRow: View {

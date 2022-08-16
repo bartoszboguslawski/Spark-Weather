@@ -1,10 +1,3 @@
-//
-//  GradientBackground2.swift
-//  Spark Weather
-//
-//  Created by Bartosz Bogusławski on 24/05/2022.
-//
-
 import SwiftUI
 
 struct GradientBackground2: View {
