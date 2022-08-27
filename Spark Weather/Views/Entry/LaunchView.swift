@@ -2,22 +2,25 @@ import SwiftUI
 
 struct LaunchView: View {
     
-    @EnvironmentObject var weather: ContentModel
+    @EnvironmentObject var content: ContentModel
+    @StateObject var locations = LocationModel()
     
     var body: some View {
-        VStack {
-            if weather.authorizationState == .notDetermined {
-                RequestView()
-            } else if weather.authorizationState == .authorizedAlways ||
-                      weather.authorizationState == .authorizedWhenInUse {
-                if let model = weather.weatherData {
+        if locations.auth == .authorizedWhenInUse {
+            if let location = locations.location {
+                if let model = content.weather {
                     MainView(model: model)
                 } else {
-                    LoadingView()
+                    ProgressView()
+                        .task {
+                            await content.getData(lat: location.latitude, lon: location.longitude)
+                        }
                 }
-            } else {
-                ForbiddenView()
             }
+        } else if locations.auth == .denied {
+            ForbiddenView()
+        } else if locations.auth == .notDetermined {
+            LoadingView()
         }
     }
 }

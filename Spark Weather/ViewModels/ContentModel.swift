@@ -1,85 +1,28 @@
 import Foundation
 import CoreLocation
 
-class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+@MainActor
+class ContentModel: ObservableObject {
     
-    private let apiKey = "2dc71d6c621cf96afd12b19fc208699f"
-    @Published var weatherData: WeatherModel?
+    @Published var weather: WeatherModel?
+    private let apiKey = "8cd85afd22fa71f4a1cf3742e523938f"
     
-    var locationManager = CLLocationManager()
-    @Published var authorizationState = CLAuthorizationStatus.notDetermined
-    @Published var location: CLLocationCoordinate2D?
     
-    override init() {
-        super.init()
-        locationManager.delegate = self
-    }
-    
-    func requestLocation() {
-        locationManager.requestWhenInUseAuthorization()
-    }
-
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        authorizationState = locationManager.authorizationStatus
-        
-        if locationManager.authorizationStatus == .authorizedAlways ||
-            locationManager.authorizationStatus == .authorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        location = locations.first?.coordinate
-        
-        if location != nil {
-            locationManager.stopUpdatingLocation()            
-            dataRequest(lat: location!.latitude, lon: location!.longitude)
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error getting location", error)
-    }
-    
-// MARK: - API
-    func dataRequest(lat: CLLocationDegrees, lon: CLLocationDegrees) {
-        
-        guard let url = URL(string: "https://api.openweathermap.org/data/3.0/onecall?lat=\(lat)&lon=\(lon)&appid=\(apiKey)&units=metric") else {
+    func getData(lat: CLLocationDegrees, lon: CLLocationDegrees) async {
+        guard let url = URL(string: "https://api.openweathermap.org/data/3.0/onecall?lat=\(lat)&lon=\(lon)&exclude=alerts&appid=\(apiKey)") else {
+            print("URL error")
             return
         }
-        
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10.0)
-        
-        let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
-            if error == nil {
-                do {
-                    guard let data = data else {
-                        print("Missing data")
-                        return
-                    }
-
-                    guard let response = response as? HTTPURLResponse else {
-                        print("Invalid response")
-                        return
-                    }
-                    
-                    guard response.statusCode >= 200 && response.statusCode < 300 else {
-                        print("Invalid status code: \(response.statusCode)")
-                        return
-                    }
-                    
-                    print("Data downloaded")
-                    
-                    let result = try JSONDecoder().decode(WeatherModel.self, from: data)
-                    
-                    DispatchQueue.main.async {
-                        self.weatherData = result
-                    }
-                } catch {
-                    print(error)
-                }
+        do {
+            let(data, response) = try await URLSession.shared.data(from: url)
+            
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Wrong response code \((response as? HTTPURLResponse)?.statusCode ?? 0)")}
+            
+            if let result = try? JSONDecoder().decode(WeatherModel.self, from: data) {
+                weather = result
             }
+        } catch {
+            print(error)
         }
-        dataTask.resume()
     }
 }
