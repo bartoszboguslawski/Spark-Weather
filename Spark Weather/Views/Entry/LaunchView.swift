@@ -11,7 +11,7 @@ struct LaunchView: View {
                 if let model = content.weather {
                     MainView(model: model)
                 } else {
-                    ProgressView()
+                    LoadingView()
                         .task {
                             await content.getData(lat: location.latitude, lon: location.longitude)
                         }

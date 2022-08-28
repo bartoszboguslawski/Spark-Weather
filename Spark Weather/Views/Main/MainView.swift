@@ -7,19 +7,11 @@ struct MainView: View {
     var body: some View {
         ZStack {
             GradientBackground()
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack {
-                    TabView {
-                        Tab1View(model: model)
-                        Tab2View(model: model)
-                    }
-                    .frame(height: 250, alignment: .center)
-                    .cornerRadius(10)
-                    .tabViewStyle(PageTabViewStyle())
-                    .padding()
-                    .foregroundColor(Color.theme.tabcolor)
-                    
-                    ScrollView(.horizontal) {
+                    CurrentTempView(model: model)
+                        .padding(.vertical, 40)
+                    ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             if model.hourly != nil {
                                 ForEach(model.hourly!.prefix(24)) { hour in
@@ -35,6 +27,8 @@ struct MainView: View {
                             DailyRow(model: model, min: day.temp!.min, max: day.temp!.max, dt: day.dt, weather: day.weather)
                         }
                     }
+                    Divider()
+                    DetailedView(model: model)
                 }
             }
         }
