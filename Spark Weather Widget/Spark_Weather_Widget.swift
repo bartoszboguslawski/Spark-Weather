@@ -21,10 +21,3 @@ struct Spark_Weather_Widget: Widget {
         .description("Get quick access to the weather.")
     }
 }
-
-struct Spark_Weather_Widget_Previews: PreviewProvider {
-    static var previews: some View {
-        WidgetView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}

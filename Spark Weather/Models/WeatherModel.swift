@@ -115,3 +115,8 @@ struct Minutely: Decodable {
     let dt, precipitation: Double?
 }
 
+//extension Current {
+//    func te() -> Current {
+//        Current(
+//    }
+//}
