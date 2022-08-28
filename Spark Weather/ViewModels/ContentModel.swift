@@ -10,7 +10,7 @@ class ContentModel: ObservableObject {
     
     func getData(lat: CLLocationDegrees, lon: CLLocationDegrees) async {
         guard let url = URL(string: "https://api.openweathermap.org/data/3.0/onecall?lat=\(lat)&lon=\(lon)&exclude=alerts&units=metric&appid=\(apiKey)") else {
-            print("URL error")
+            print("Wrong URL")
             return
         }
         do {

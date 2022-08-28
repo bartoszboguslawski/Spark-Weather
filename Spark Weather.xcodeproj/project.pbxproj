@@ -10,6 +10,18 @@
 		693E27F5283E86550070B679 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693E27F4283E86550070B679 /* Launch.storyboard */; };
 		69600AAD28BB6CF000BA8719 /* CurrentTempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AAC28BB6CF000BA8719 /* CurrentTempView.swift */; };
 		69600AAF28BB754200BA8719 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AAE28BB754200BA8719 /* DetailedView.swift */; };
+		69600AB728BB82B200BA8719 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69600AB628BB82B200BA8719 /* WidgetKit.framework */; };
+		69600AB928BB82B200BA8719 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69600AB828BB82B200BA8719 /* SwiftUI.framework */; };
+		69600ABC28BB82B200BA8719 /* Spark_Weather_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600ABB28BB82B200BA8719 /* Spark_Weather_Widget.swift */; };
+		69600ABE28BB82B400BA8719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69600ABD28BB82B400BA8719 /* Assets.xcassets */; };
+		69600AC228BB82B400BA8719 /* Spark Weather WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 69600AB428BB82B200BA8719 /* Spark Weather WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		69600AC828BB82F500BA8719 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AC728BB82F500BA8719 /* Provider.swift */; };
+		69600ACA28BB832600BA8719 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AC928BB832600BA8719 /* SimpleEntry.swift */; };
+		69600ACC28BB834C00BA8719 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600ACB28BB834C00BA8719 /* WidgetView.swift */; };
+		69600AD328BBCB1C00BA8719 /* SmallSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AD228BBCB1C00BA8719 /* SmallSizeView.swift */; };
+		69600AD528BBCB3800BA8719 /* MediumSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AD428BBCB3800BA8719 /* MediumSizeView.swift */; };
+		69600AD728BBCEBB00BA8719 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AD628BBCEBB00BA8719 /* Background.swift */; };
+		69600ADA28BBCF3400BA8719 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AD928BBCF3400BA8719 /* Colors.swift */; };
 		6982049D28BA7BA000F989CF /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6982049C28BA7BA000F989CF /* LocationModel.swift */; };
 		69D52771283670AD006E5CE4 /* ForbiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D52770283670AD006E5CE4 /* ForbiddenView.swift */; };
 		69F0DCBE283CE3D200E9FFC6 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCBD283CE3D200E9FFC6 /* WeatherModel.swift */; };
@@ -29,10 +41,47 @@
 		69FF5D97283FEB0200277B6E /* HourlyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FF5D96283FEB0200277B6E /* HourlyRow.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		69600AC028BB82B400BA8719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69FEE6342832C7D800DA358C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69600AB328BB82B200BA8719;
+			remoteInfo = "Spark Weather WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		69600AC628BB82B400BA8719 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				69600AC228BB82B400BA8719 /* Spark Weather WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		693E27F4283E86550070B679 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		69600AAC28BB6CF000BA8719 /* CurrentTempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTempView.swift; sourceTree = "<group>"; };
 		69600AAE28BB754200BA8719 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
+		69600AB428BB82B200BA8719 /* Spark Weather WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Spark Weather WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69600AB628BB82B200BA8719 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		69600AB828BB82B200BA8719 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		69600ABB28BB82B200BA8719 /* Spark_Weather_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spark_Weather_Widget.swift; sourceTree = "<group>"; };
+		69600ABD28BB82B400BA8719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69600ABF28BB82B400BA8719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69600AC728BB82F500BA8719 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		69600AC928BB832600BA8719 /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
+		69600ACB28BB834C00BA8719 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		69600AD228BBCB1C00BA8719 /* SmallSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSizeView.swift; sourceTree = "<group>"; };
+		69600AD428BBCB3800BA8719 /* MediumSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumSizeView.swift; sourceTree = "<group>"; };
+		69600AD628BBCEBB00BA8719 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		69600AD928BBCF3400BA8719 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6982049C28BA7BA000F989CF /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		69D52770283670AD006E5CE4 /* ForbiddenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForbiddenView.swift; sourceTree = "<group>"; };
 		69F0DCBD283CE3D200E9FFC6 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
@@ -54,6 +103,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		69600AB128BB82B200BA8719 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69600AB928BB82B200BA8719 /* SwiftUI.framework in Frameworks */,
+				69600AB728BB82B200BA8719 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69FEE6392832C7D800DA358C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +122,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69600AB528BB82B200BA8719 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69600AB628BB82B200BA8719 /* WidgetKit.framework */,
+				69600AB828BB82B200BA8719 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69600ABA28BB82B200BA8719 /* Spark Weather Widget */ = {
+			isa = PBXGroup;
+			children = (
+				69600ABB28BB82B200BA8719 /* Spark_Weather_Widget.swift */,
+				69600ACF28BBCA8900BA8719 /* Views */,
+				69600AC728BB82F500BA8719 /* Provider.swift */,
+				69600AC928BB832600BA8719 /* SimpleEntry.swift */,
+				69600AD828BBCF2300BA8719 /* Helpers */,
+				69600ABD28BB82B400BA8719 /* Assets.xcassets */,
+				69600ABF28BB82B400BA8719 /* Info.plist */,
+			);
+			path = "Spark Weather Widget";
+			sourceTree = "<group>";
+		};
+		69600ACF28BBCA8900BA8719 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69600ACB28BB834C00BA8719 /* WidgetView.swift */,
+				69600AD228BBCB1C00BA8719 /* SmallSizeView.swift */,
+				69600AD428BBCB3800BA8719 /* MediumSizeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		69600AD828BBCF2300BA8719 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				69600AD928BBCF3400BA8719 /* Colors.swift */,
+				69600AD628BBCEBB00BA8719 /* Background.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		69F0DCBC283CE3C100E9FFC6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				69FEE63E2832C7D800DA358C /* Spark Weather */,
+				69600ABA28BB82B200BA8719 /* Spark Weather Widget */,
+				69600AB528BB82B200BA8719 /* Frameworks */,
 				69FEE63D2832C7D800DA358C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				69FEE63C2832C7D800DA358C /* Spark Weather.app */,
+				69600AB428BB82B200BA8719 /* Spark Weather WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +285,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		69600AB328BB82B200BA8719 /* Spark Weather WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69600AC328BB82B400BA8719 /* Build configuration list for PBXNativeTarget "Spark Weather WidgetExtension" */;
+			buildPhases = (
+				69600AB028BB82B200BA8719 /* Sources */,
+				69600AB128BB82B200BA8719 /* Frameworks */,
+				69600AB228BB82B200BA8719 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spark Weather WidgetExtension";
+			productName = "Spark Weather WidgetExtension";
+			productReference = 69600AB428BB82B200BA8719 /* Spark Weather WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		69FEE63B2832C7D800DA358C /* Spark Weather */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69FEE64A2832C7DA00DA358C /* Build configuration list for PBXNativeTarget "Spark Weather" */;
@@ -189,10 +309,12 @@
 				69FEE6382832C7D800DA358C /* Sources */,
 				69FEE6392832C7D800DA358C /* Frameworks */,
 				69FEE63A2832C7D800DA358C /* Resources */,
+				69600AC628BB82B400BA8719 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				69600AC128BB82B400BA8719 /* PBXTargetDependency */,
 			);
 			name = "Spark Weather";
 			productName = "Spark Weather";
@@ -206,9 +328,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					69600AB328BB82B200BA8719 = {
+						CreatedOnToolsVersion = 13.4;
+					};
 					69FEE63B2832C7D800DA358C = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -228,11 +353,20 @@
 			projectRoot = "";
 			targets = (
 				69FEE63B2832C7D800DA358C /* Spark Weather */,
+				69600AB328BB82B200BA8719 /* Spark Weather WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		69600AB228BB82B200BA8719 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69600ABE28BB82B400BA8719 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69FEE63A2832C7D800DA358C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +381,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		69600AB028BB82B200BA8719 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69600AD528BBCB3800BA8719 /* MediumSizeView.swift in Sources */,
+				69600ADA28BBCF3400BA8719 /* Colors.swift in Sources */,
+				69600AD728BBCEBB00BA8719 /* Background.swift in Sources */,
+				69600AD328BBCB1C00BA8719 /* SmallSizeView.swift in Sources */,
+				69600ACA28BB832600BA8719 /* SimpleEntry.swift in Sources */,
+				69600AC828BB82F500BA8719 /* Provider.swift in Sources */,
+				69600ACC28BB834C00BA8719 /* WidgetView.swift in Sources */,
+				69600ABC28BB82B200BA8719 /* Spark_Weather_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69FEE6382832C7D800DA358C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,7 +421,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		69600AC128BB82B400BA8719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69600AB328BB82B200BA8719 /* Spark Weather WidgetExtension */;
+			targetProxy = 69600AC028BB82B400BA8719 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		69600AC428BB82B400BA8719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F442RAMZD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spark Weather Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Spark Weather Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BartoszBoguslawski.Spark-Weather.Spark-Weather-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69600AC528BB82B400BA8719 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F442RAMZD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spark Weather Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Spark Weather Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BartoszBoguslawski.Spark-Weather.Spark-Weather-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		69FEE6482832C7DA00DA358C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -390,6 +603,7 @@
 		69FEE64B2832C7DA00DA358C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,6 +636,7 @@
 		69FEE64C2832C7DA00DA358C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +669,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		69600AC328BB82B400BA8719 /* Build configuration list for PBXNativeTarget "Spark Weather WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69600AC428BB82B400BA8719 /* Debug */,
+				69600AC528BB82B400BA8719 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		69FEE6372832C7D800DA358C /* Build configuration list for PBXProject "Spark Weather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
