@@ -25,6 +25,7 @@
 		69600AD728BBCEBB00BA8719 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AD628BBCEBB00BA8719 /* Background.swift */; };
 		69600ADA28BBCF3400BA8719 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69600AD928BBCF3400BA8719 /* Colors.swift */; };
 		6982049D28BA7BA000F989CF /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6982049C28BA7BA000F989CF /* LocationModel.swift */; };
+		69AA4FE428BE0AAC00D3F2A1 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6982049C28BA7BA000F989CF /* LocationModel.swift */; };
 		69D52771283670AD006E5CE4 /* ForbiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D52770283670AD006E5CE4 /* ForbiddenView.swift */; };
 		69F0DCBE283CE3D200E9FFC6 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCBD283CE3D200E9FFC6 /* WeatherModel.swift */; };
 		69F0DCC0283D2A3900E9FFC6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0DCBF283D2A3900E9FFC6 /* Colors.swift */; };
@@ -392,6 +393,7 @@
 				69600AD728BBCEBB00BA8719 /* Background.swift in Sources */,
 				69600AD328BBCB1C00BA8719 /* SmallSizeView.swift in Sources */,
 				6938234D28BBFB6C00983DC2 /* WeatherModel.swift in Sources */,
+				69AA4FE428BE0AAC00D3F2A1 /* LocationModel.swift in Sources */,
 				69600ACA28BB832600BA8719 /* SimpleEntry.swift in Sources */,
 				69600AC828BB82F500BA8719 /* Provider.swift in Sources */,
 				69600ACC28BB834C00BA8719 /* WidgetView.swift in Sources */,
@@ -623,7 +625,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = Launch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,7 +658,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = Launch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

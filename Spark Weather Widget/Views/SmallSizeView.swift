@@ -11,21 +11,35 @@ struct SmallSizeView: View {
             if let weather = entry.weather {
                 VStack {
                     HStack {
-                        Text("\(round(weather.current?.temp ?? 0), specifier: "%g")°")                            .font(.system(size: 40))
+                        Text("\(round(weather.current?.temp ?? 0), specifier: "%g")°")
+                            .font(.system(size: 50))
                         Spacer()
-                        Image(systemName: "sun.max")
-                            .frame(width: 40, height: 40)
-                            .scaledToFit()
                     }
+                    .padding(.horizontal, 20.0)
+                    Spacer()
                     if weather.current?.weather != nil {
-                        ForEach(weather.current!.weather!) { r in
-                            Text(r.main ?? "")
-                                .font(.title2)
+                        VStack {
+                            HStack {
+                                ForEach(weather.current!.weather!) { id in
+                                    Image(String(id.icon ?? ""))
+                                        .frame(width: 20, height: 20)
+                                        .scaledToFit()
+                                }
+                                Spacer()
+                            }
+                            HStack {
+                                ForEach(weather.current!.weather!) { r in
+                                    Text(r.main ?? "")
+                                        .font(.system(size: 15))
+                                }
+                                Spacer()
+                            }
                         }
+                        .padding(.horizontal, 20.0)
                     }
                 }
-                .padding()
                 .foregroundColor(Color.theme.secondaryColor)
+                .padding(.vertical, 10.0)
             }
         }
     }

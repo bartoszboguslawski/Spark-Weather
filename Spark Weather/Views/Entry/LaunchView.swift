@@ -2,18 +2,22 @@ import SwiftUI
 
 struct LaunchView: View {
     
-    @EnvironmentObject var content: ContentModel
     @StateObject var locations = LocationModel()
+    @State var weather: WeatherModel?
     
     var body: some View {
         if locations.auth == .authorizedWhenInUse {
             if let location = locations.location {
-                if let model = content.weather {
-                    MainView(model: model)
+                if let weather = weather {
+                    MainView(model: weather)
                 } else {
                     LoadingView()
                         .task {
-                            await content.getData(lat: location.latitude, lon: location.longitude)
+                            do {
+                                weather = try await ContentModel.shared.getData(lat: location.latitude, lon: location.longitude)
+                            } catch {
+                                print(error)
+                            }
                         }
                 }
             }

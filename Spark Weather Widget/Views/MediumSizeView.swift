@@ -9,7 +9,7 @@ struct MediumSizeView: View {
         ZStack {
             Background()
             VStack {
-                
+                Text("ok")
             }
         }
     }
