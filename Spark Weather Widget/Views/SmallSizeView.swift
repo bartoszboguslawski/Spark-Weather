@@ -27,6 +27,7 @@ struct SmallSizeView: View {
                                 }
                                 Spacer()
                             }
+                            .padding(.horizontal, 6.0)
                             HStack {
                                 ForEach(weather.current!.weather!) { r in
                                     Text(r.main ?? "")
