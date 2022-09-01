@@ -44,8 +44,8 @@ struct MediumSizeView: View {
                                             .font(.system(size: 10))
                                     }
                                     if weather.current != nil {
-                                        ForEach(weather.current!.weather!) { id in
-                                            Image(String(id.icon ?? ""))
+                                        ForEach(hour.weather!) { r in
+                                            Image(String(r.icon ?? ""))
                                                 .resizable()
                                                 .frame(width: 25, height: 25)
                                                 .scaledToFit()
